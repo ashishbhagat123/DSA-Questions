@@ -13,7 +13,7 @@
 // 1<= length of binary string <= 32
 
 
-let num = "00000000000000000000000000000111"
+let num = "0000000000000000000000000000101"
 let binary = ""
 num = num.split("")
 
@@ -27,4 +27,12 @@ for(let i = 0; i < num.length; i++){
 
 num = num.filter((e) => e !== "5").join("")
 
+let decimal = 0
+for(let i = num.length-1; i >= 0; i--){
+    decimal = decimal + (Number(num[i]) * (2 ** (num.length - (i+1))))
+}
 
+console.log(decimal)
+
+// Time Complexity = O(n)
+// Space Complexity = O(1)
