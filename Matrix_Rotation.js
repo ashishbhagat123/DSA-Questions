@@ -42,23 +42,21 @@
     
 //     } 
 
-const matrix = [
-    [1, 2, 3,6],
-    [4, 5, 6, 8],
-    [7, 8, 9, 11],
-    [12,13,14,15]
-];
+// const mat = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
+// ];
 
-const rot = []
-let n = matrix.length
-for(let i = 0; i <n/2; i++){
-    for(let j = i; j < n - (i+1); j++){
-        console.log("j", j, "i", i)
-            let temp = matrix[i][j]
-			matrix[i][j] = matrix[j][n-i-1]
-			matrix[j][n-i-1] = matrix[n-i-1][n-j-1]
-			matrix[n-i-1][n-j-1] = matrix[n-j-1][i];
-			matrix[n-j-1][i] = temp
-    }
-}
-console.log(matrix)
+// const rot = []
+// let n = mat.length
+// for(let i = 0; i <n; i++){
+//     rot[i] = []
+//     for(let j = 0; j < n; j++){
+//         rot[i][j] = mat[j][mat.length - [i+1]]
+//     }
+// }
+// console.log(rot)
+
+// Time Complexity = O(n*n)
+// Space Complexity = O(n * m)
